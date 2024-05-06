@@ -57,4 +57,4 @@ fib = caching_fibonacci()
 print(fib(10))  # 55
 print(fib(15))  # 610
 print(fib("test"))  # TypeError
-print(fib(-1))  # ValueError
+print(fib(-3))  # ValueError
