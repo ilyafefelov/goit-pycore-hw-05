@@ -125,8 +125,8 @@ def main():
                 "phone": lambda: show_phone(args, contacts),
                 "all": lambda: show_all(contacts),
             }
-            return switcher.get(command, lambda: "Invalid command. Available commands: hello, add, change, phone, all, close, exit")()
-
+            result = switcher.get(command, "Invalid command. Available commands: hello, add, change, phone, all, close, exit")
+            return result() if callable(result) else result
         print(switch_commands(command))
 
 
